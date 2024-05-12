@@ -8,7 +8,7 @@ const FitnessCards = () => {
   const navigation = useNavigation();
 
   return (
-    <View style={{marginTop: 80, marginHorizontal: 20, marginBottom: 20}}>
+    <View style={{marginTop: 80, marginHorizontal: 20, marginBottom: 20, }}>
       {
         FitnessData.map((item, id) => (
           <TouchableOpacity onPress={() => navigation.navigate("Workout", {
