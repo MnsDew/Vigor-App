@@ -30,9 +30,10 @@ const RestScreen = () => {
   return (
     <SafeAreaView>
       <Image
-        // resizeMode="contain"
+         resizeMode="contain"
         source={{
-          uri: "https://img.freepik.com/free-photo/full-length-athlete-sipping-water-from-fitness-bottle-exhausted-after-workout_1098-18878.jpg?w=360&t=st=1689099570~exp=1689100170~hmac=a60d176d8a393f59b8b032dd294005ceedbd048a04c01e542bcffa815ecd4428",
+          uri:"https://www.refreshdarwin.com.au/wp-content/uploads/2016/10/Order-1823-Image-5.jpg",
+          //uri: "https://img.freepik.com/free-photo/full-length-athlete-sipping-water-from-fitness-bottle-exhausted-after-workout_1098-18878.jpg?w=360&t=st=1689099570~exp=1689100170~hmac=a60d176d8a393f59b8b032dd294005ceedbd048a04c01e542bcffa815ecd4428",
         }}
         style={{ width: "100%", height: 420, borderBottomLeftRadius: 20, borderBottomRightRadius: 20 }}
       />

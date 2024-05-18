@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TextInput, TouchableOpacity ,Image } from 'react-native';
 import * as FileSystem from 'expo-file-system';
 
 const Login = ({ navigation }) => {
@@ -38,6 +38,9 @@ const Login = ({ navigation }) => {
 
     return (
         <View style={styles.container}>
+        <Image
+           source={require('C:/Users/DELL/Documents/React-Native/vigorWorkout/Vigor-React_Native-/assets/logo-no-background.png')}  
+            style={styles.logo} />
             <Text style={styles.title}>Login to Vigor</Text>
             <View style={styles.inputContainer}>
                 <TextInput
@@ -71,6 +74,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: 'rgb(32, 32, 36)',
         paddingHorizontal: 20,
+    },
+    logo: {
+        width: 170,
+        height: 160,
+        resizeMode: 'contain',
+        marginBottom: 20,
     },
     title: {
         fontSize: 30,
@@ -106,37 +115,5 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Login;
-
-
-
-// const [idCard, setIdCard] = useState('');
-//     const [password, setPassword] = useState('');
-//     const serverIP = 'http://192.168.56.1:3000'; // Update this IP address
-//     const handleLogin = async () => {
-//     try {
-//         const response = await fetch(`${serverIP}/login`, {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json',
-//             },
-//             body: JSON.stringify({
-//                 idCard,
-//                 password,
-//             }),
-//         });
-
-//         const data = await response.json();
-//         console.log('Login Response:', data);
-
-//         // Handle success or show an error message to the user
-//         if (data.success) {
-//             navigation.navigate('HomeLoged', { user: data.user });
-//         } else {
-//             // Handle error
-//             console.error(data.error);
-//         }
-//     } catch (error) {
-//         console.error('Error:', error);
-//     }
-// };
+export default Login; 
+//

@@ -15,7 +15,7 @@ const WorkoutScreen = () => {
     <>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        style={{ backgroundColor: "white", marginTop: 20 }}
+        style={{ backgroundColor: "white", marginTop: 20 , }}
       >
         <Image
           style={{ width: "100%", height: 200, borderBottomLeftRadius: 20, borderBottomRightRadius: 20, marginBottom: 20 }}
@@ -36,7 +36,7 @@ const WorkoutScreen = () => {
               <View style={{ flexDirection: "row", alignItems: "center", }}>
                 <Image style={{ width: 90, height: 90, }} source={{ uri: item.image }} />
 
-                <View style={{ marginLeft: 10 }}>
+                <View style={{ marginLeft: 10}}>
                   <Text style={{ fontSize: 18, fontWeight: "bold" }}>{item.name}</Text>
                   <Text style={{ marginTop: 4, fontSize: 16, color: "gray" }}>{item.sets}</Text>
                 </View>
@@ -53,11 +53,11 @@ const WorkoutScreen = () => {
       <TouchableOpacity onPress={() => {
         navigation.navigate("Fit", { exercises: route.params.exercises }) 
         setCompleted([]);
-      }} style={{ backgroundColor: "#FF8A00", padding: 12, marginHorizontal: 15, marginVertical: 20, borderRadius: 50}}>
-        <Text style={{ textAlign: "center", color: "#000000", fontWeight: "bold", fontSize: 20 }}><MaterialCommunityIcons name="whistle" size={24} color="white" /> START</Text>
+      }} style={{ backgroundColor: "#FF8A00", paddingVertical: 12, paddingHorizontal: 30, marginHorizontal: 15, marginVertical: 20, borderRadius: 50}}>
+        <Text style={{ textAlign: "center", color: "#000000", fontWeight: "bold", fontSize: 20 }}>START <MaterialCommunityIcons name="whistle" size={24} color="white" /></Text>
       </TouchableOpacity>
     </>
   )
 }
 
-export default WorkoutScreen
+export default WorkoutScreen;

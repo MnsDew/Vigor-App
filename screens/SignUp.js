@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, TextInput, TouchableOpacity, ScrollView, Image } from 'react-native';
 import * as FileSystem from 'expo-file-system';
 
 const SignUp = ({ navigation }) => {
@@ -10,7 +10,7 @@ const SignUp = ({ navigation }) => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
 
-    const handleLogin = () =>{
+    const handleLogin = () => {
         navigation.navigate('Login');
     }
 
@@ -69,74 +69,91 @@ const SignUp = ({ navigation }) => {
             console.error('Error handling sign up:', error.message);
         }
     };
+
     return (
-        <ScrollView style={styles.container}>
-            <Text style={styles.title}>Sign Up in Vigor</Text>
-            <View style={styles.inputContainer}>
-                <TextInput
-                    style={styles.input}
-                    placeholder="Full Name"
-                    placeholderTextColor="rgba(255, 255, 255, 0.7)"
-                    onChangeText={(text) => setFullName(text)}
+        <ScrollView contentContainerStyle={styles.scrollViewContainer}>
+            <View style={styles.container}>
+                {/* Logo */}
+                <Image
+                    style={styles.logo}
+                    source={require('C:/Users/DELL/Documents/React-Native/vigorWorkout/Vigor-React_Native-/assets/logo-no-background.png')} // Change the path to your logo file
                 />
-                <TextInput
-                    style={styles.input}
-                    placeholder="ID Number"
-                    placeholderTextColor="rgba(255, 255, 255, 0.7)"
-                    keyboardType="numeric"
-                    onChangeText={(text) => setIdCard(text)}
-                />
-                <TextInput
-                    style={styles.input}
-                    placeholder="Age"
-                    placeholderTextColor="rgba(255, 255, 255, 0.7)"
-                    keyboardType="numeric"
-                    onChangeText={(text) => setAge(text)}
-                />
-                <TextInput
-                    style={styles.input}
-                    placeholder="Email"
-                    placeholderTextColor="rgba(255, 255, 255, 0.7)"
-                    onChangeText={(text) => setEmail(text)}
-                />
-                <TextInput
-                    style={styles.input}
-                    placeholder="Password"
-                    secureTextEntry={true}
-                    placeholderTextColor="rgba(255, 255, 255, 0.7)"
-                    onChangeText={(text) => setPassword(text)}
-                />
-                <TextInput
-                    style={styles.input}
-                    placeholder="Confirm Password"
-                    secureTextEntry={true}
-                    placeholderTextColor="rgba(255, 255, 255, 0.7)"
-                    onChangeText={(text) => setConfirmPassword(text)}
-                />
+                <Text style={styles.title}>Sign Up in Vigor</Text>
+                <View style={styles.inputContainer}>
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Full Name"
+                        placeholderTextColor="rgba(255, 255, 255, 0.7)"
+                        onChangeText={(text) => setFullName(text)}
+                    />
+                    
+                    <TextInput
+                        style={styles.input}
+                        placeholder="ID Number"
+                        placeholderTextColor="rgba(255, 255, 255, 0.7)"
+                        keyboardType="numeric"
+                        onChangeText={(text) => setIdCard(text)}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Age"
+                        placeholderTextColor="rgba(255, 255, 255, 0.7)"
+                        keyboardType="numeric"
+                        onChangeText={(text) => setAge(text)}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Email"
+                        placeholderTextColor="rgba(255, 255, 255, 0.7)"
+                        onChangeText={(text) => setEmail(text)}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Password"
+                        secureTextEntry={true}
+                        placeholderTextColor="rgba(255, 255, 255, 0.7)"
+                        onChangeText={(text) => setPassword(text)}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Confirm Password"
+                        secureTextEntry={true}
+                        placeholderTextColor="rgba(255, 255, 255, 0.7)"
+                        onChangeText={(text) => setConfirmPassword(text)}
+                    />
+                </View>
+                <TouchableOpacity style={styles.button} onPress={handleSignUp}>
+                    <Text style={styles.buttonText}>Sign Up</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.button} onPress={handleLogin}>
+                    <Text style={styles.buttonText}>Login</Text>
+                </TouchableOpacity>
             </View>
-            <TouchableOpacity style={styles.button} onPress={handleSignUp}>
-                <Text style={styles.buttonText}>Sign Up</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={handleLogin}>
-                <Text style={styles.buttonText}>Login</Text>
-            </TouchableOpacity>
         </ScrollView>
     );
 };
 
 const styles = StyleSheet.create({
-    container: {
-        marginTop: 45,
-        backgroundColor: 'rgb(32, 32, 36)',
+    scrollViewContainer: {
         flexGrow: 1,
+        justifyContent: 'center',
+    },
+    container: {
+        backgroundColor: 'rgb(32, 32, 36)',
         paddingHorizontal: 20,
+        alignItems: 'center',
+    },
+    logo: {
+        marginTop: 50,
+        marginBottom: 20,
+        width: 150,
+        height: 70,
+        alignSelf: 'center',
     },
     title: {
         fontSize: 30,
         color: 'orange',
         marginBottom: 30,
-        paddingTop: 20,
-        paddingLeft:20,
     },
     inputContainer: {
         width: '100%',
@@ -150,6 +167,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         fontSize: 16,
         color: 'white',
+        width: '100%',
     },
     button: {
         marginTop: 15,
@@ -167,42 +185,3 @@ const styles = StyleSheet.create({
 });
 
 export default SignUp;
-
-// const serverIP = 'http://192.168.56.1:3000'; // Update this IP address
-
-//     const handleSignUp = async ({navigation}) => {
-//         try {
-//             // Check if passwords match
-//             if (password !== confirmPassword) {
-//                 console.error('Passwords do not match');
-//                 return;
-//             }
-
-//             const response = await fetch(`${serverIP}/signup`, {
-//                 method: 'POST',
-//                 headers: {
-//                     'Content-Type': 'application/json',
-//                 },
-//                 body: JSON.stringify({
-//                     fullName,
-//                     idCard,
-//                     age,
-//                     email,
-//                     password,
-//                     confirmPass: confirmPassword,
-//                 }),
-//             });
-
-//             const data = await response.json();
-
-//             // Handle success or show an error message to the user
-//             if (data.success) {
-//                 navigation.navigate('HomeLoged', { user: data.user });
-//             } else {
-//                 // Handle error
-//                 console.error(data.error);
-//             }
-//         } catch (error) {
-//             console.error('Error:', error);
-//         }
-//     };
