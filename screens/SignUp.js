@@ -16,13 +16,13 @@ const SignUp = ({ navigation }) => {
 
     const handleSignUp = async () => {
         try {
-            // Ensure that all fields are filled
+             
             if (!fullName || !idCard || !age || !email || !password || !confirmPassword) {
                 alert('Please fill in all fields');
                 return;
             }
 
-            // Check if passwords match
+             
             if (password !== confirmPassword) {
                 alert('Passwords do not match');
                 return;
@@ -49,7 +49,7 @@ const SignUp = ({ navigation }) => {
                 return;
             }
 
-            // Add new user to the array
+             
             const newUser = {
                 fullName,
                 idCard,
@@ -60,7 +60,7 @@ const SignUp = ({ navigation }) => {
 
             users.push(newUser);
 
-            // Write updated user data back to userInfo.json
+             
             await FileSystem.writeAsStringAsync(userInfoPath, JSON.stringify(users), { encoding: FileSystem.EncodingType.UTF8 });
             console.log(users);
             alert('Sign Up Successful!');

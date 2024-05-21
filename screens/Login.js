@@ -23,7 +23,7 @@ const Login = ({ navigation }) => {
             const contents = await FileSystem.readAsStringAsync(userInfoPath);
             const userInfo = JSON.parse(contents);
 
-            // Check if user credentials are valid
+            // Hey , here I wrote this to check if user credentials are valid - "MNS70"
             const isValidUser = userInfo.some((user) => user.idCard === idCard && user.password === password);
 
             if (isValidUser) {
