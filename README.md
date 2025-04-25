@@ -1,10 +1,9 @@
 # 🧠 Vigor – A Best-Practice Mobile Workout Planning App for Software Requirements Engineering (2024)
 
-**You can have a look on the Vigor_Software_Requirements_best_parctice REPO IT CONTATION ALL FILES**
+**You can have a look on the Vigor_Software_Requirements_with_Mobile_App REPO IT CONTATION ALL FILES**
 
 --- 
 
-# 🧠 Vigor – Mobile Workout Planning App (Software Requirements Engineering – 2024)
 
 **Vigor** is a mobile **workout planning app** developed as a best-practice project for the **Software Requirements Engineering** course in 2024. It demonstrates the complete software requirements lifecycle — from initial elicitation to user interface design — along with a functional mobile front-end that includes authentication.This project emphasizes a comprehensive understanding and application of the entire software requirements lifecycle, including elicitation, analysis, modeling, documentation, and prototyping.
 
