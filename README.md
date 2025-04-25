@@ -1,17 +1,28 @@
-# 🧠 Vigor – A Best-Practice Mobile App for Software Requirements Engineering (2024)
+# 🧠 Vigor – A Best-Practice Mobile Workout Planning App for Software Requirements Engineering (2024)
 
 **You can have a look on the Vigor_Software_Requirements_best_parctice REPO IT CONTATION ALL FILES**
 
-**Vigor** is a conceptual mobile application developed as a capstone project for the **Software Requirements Engineering** course in 2024. This project emphasizes a comprehensive understanding and application of the entire software requirements lifecycle, including elicitation, analysis, modeling, documentation, and prototyping.
+--- 
+
+# 🧠 Vigor – Mobile Workout Planning App (Software Requirements Engineering – 2024)
+
+**Vigor** is a mobile **workout planning app** developed as a best-practice project for the **Software Requirements Engineering** course in 2024. It demonstrates the complete software requirements lifecycle — from initial elicitation to user interface design — along with a functional mobile front-end that includes authentication.This project emphasizes a comprehensive understanding and application of the entire software requirements lifecycle, including elicitation, analysis, modeling, documentation, and prototyping.
+
 
 ---
 
-## 📱 About the App
+## 🏋️ What is Vigor?
 
-Vigor is a front-end mobile app focused on simplicity, clarity, and real-world use case simulation. It features a clean interface with **user authentication** (login/register), and was designed with a strong emphasis on **usability and user experience**.
+Vigor helps users **plan, track, and manage their workout routines**. The app simulates the structure of a real workout application with features such as:
 
+- User registration and login
+- Workout categories and planning UI (mockups)
+- Personalization elements
+- Clean and intuitive user interface
+
+
+ 
 While the backend was not implemented, the front-end mimics a working product and showcases the flow of a professional app prototype.
-
 ---
 
 ## 📌 Key Features
@@ -63,18 +74,22 @@ This app was developed as a **best-practice project** for academic purposes unde
 
 ---
 
+
 ## 📘 License
 
-This project includes a **custom software agreement/license** prepared as part of the assignment. Refer to `docs/Software_License_Agreement.pdf` for full terms.
+This project includes a **custom software license agreement** created as part of the course. See `docs/Software_License_Agreement.pdf`.
 
 ---
 
-## 💡 Author
+## 🎓 Academic Info
 
-**Created by MANSOOR (MNS)**  
-GitHub: [@MnsDew](https://github.com/MnsDew)  
-Year: 2024  
-Course: Software Requirements Engineering  
+- 📅 Year: 2024  
+- 🏫 Course: Software Requirements Engineering  
+- 💡 Focus: Full-cycle development from software idea to mockup and front-end  
+- 🧑‍💻 Author: **MANSOOR (MNS)**  
+- 🔗 GitHub: [@MnsDew](https://github.com/MnsDew)
 
 ---
+
+
 
